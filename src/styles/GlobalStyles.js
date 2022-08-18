@@ -38,8 +38,14 @@ h1 {
     font-size: calc(19vmax * 9 / 16);
 }
 h2 {
-    font-size: 1.2rem;
-}  
+    font-size: calc(15vmax * 9 / 16);
+}
+h3 {
+    font-size: calc(11vmax * 9 / 16);
+}
+p {
+    font-size: calc(3vmax * 9 / 16);
+}      
 li  {
     list-style: none;
     }
@@ -58,7 +64,8 @@ a:link {
     text-decoration: none;
 }
 footer {
-    margin: 1rem;
+    margin: 1rem 1rem;
+    border 1px solid black;
 }
 `
 

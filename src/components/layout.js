@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
-import Scroll from "./locomotiveScroll"
 // import Header from "./header"
+import Scroll from "./locomotiveScroll"
 import "./locomotive-scroll.css"
 import { GlobalStyles } from "../styles/GlobalStyles"
 
@@ -25,9 +25,6 @@ const Layout = ({ children, location }) => {
       <GlobalStyles />
       <div id="container">
         <main>{children}</main>
-        <footer>
-          <h2>Kirill Ginko, {new Date().getFullYear()}</h2>
-        </footer>
       </div>
     </>
   )
