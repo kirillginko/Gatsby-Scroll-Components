@@ -33,6 +33,7 @@ const Container = styled.div`
   flex-direction: column;
   margin: 1rem 1rem;
   overflow: hidden;
+  height: min-content;
 `
 const Name = styled.div`
   display: flex;

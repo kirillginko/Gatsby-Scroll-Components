@@ -24,6 +24,7 @@ body {
     background-color: var(--background);
     min-height: -webkit-fill-available;
     font-family: "Questrial", sans-serif;
+    height: 100vh;
 }
 h1, h2, h3, h4, h5, p, a{
     color: var(--black);
@@ -58,7 +59,16 @@ img {
 html    {
     overflow: hidden;
     min-height: -webkit-fill-available;
-    }
+    --color1: transparent;
+    --color2: transparent;
+}
+.gradient {
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  font-size: 3em;
+  background: linear-gradient(to bottom, var(--color1), var(--color2));
+}
 
 a:link {
     text-decoration: none;

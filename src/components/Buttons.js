@@ -16,12 +16,12 @@ const Buttons = () => {
   }, [])
   return (
     <>
-      <Container>
+      <Container data-scroll-section>
         <Btn className="btn">Landing</Btn>
         <Btn className="btn">Take Off</Btn>
         <Btn className="btn">Location</Btn>
       </Container>
-      <ImageContainer>
+      <ImageContainer data-scroll-section>
         <ArrowImg className="btn" src={Arrow} />
         <Star className="btn">*</Star>
       </ImageContainer>
@@ -33,6 +33,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin: 1rem 1rem;
+  height: min-content;
 `
 const ImageContainer = styled.div`
   display: flex;
@@ -55,9 +56,13 @@ const Btn = styled.div`
   padding: 0.3em 0.6em;
   font-size: calc(3vmax * 9 / 16);
   color: black;
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 50px;
   cursor: pointer;
+  &:hover {
+    transition: all 0.3s ease-in;
+    scale: 1.1;
+  }
 `
 
 export default Buttons

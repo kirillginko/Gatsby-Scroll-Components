@@ -1,13 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Header from "./header"
 import Scroll from "./locomotiveScroll"
 import "./locomotive-scroll.css"
 import { GlobalStyles } from "../styles/GlobalStyles"
+import gsap from "gsap"
 
-// This `location` prop will serve as a callback on route change
 const Layout = ({ children, location }) => {
+  useEffect(() => {
+    gsap.to("html", {
+      "--color1": "blue",
+      "--color2": "red",
+      scrollTrigger: {
+        pin: true,
+        trigger: ".gradient",
+        scroller: ".container",
+        end: "+=1000",
+        scrub: true,
+      },
+    })
+  }, [])
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -20,10 +33,10 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <GlobalStyles />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Scroll callbacks={location} />
-      <GlobalStyles />
-      <div id="container">
+      <div classname="container" id="container">
         <main>{children}</main>
       </div>
     </>
